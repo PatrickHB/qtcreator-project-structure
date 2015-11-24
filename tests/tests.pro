@@ -1,11 +1,12 @@
+TEMPLATE = app
+
 include(../defaults.pri)
 
 CONFIG += console
+CONFIG += c++14
 CONFIG -= app_bundle
 CONFIG -= qt
 
-TEMPLATE = app
-
 SOURCES += main.cpp
 
-LIBS += -lunittest++ -L../src -lmyapp
+LIBS += -L../src -lmyapp

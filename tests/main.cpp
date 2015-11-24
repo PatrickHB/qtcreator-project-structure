@@ -1,12 +1,10 @@
-#include <unittest++/UnitTest++.h>
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#include "catch.hpp"
 #include <myclass.h>
 
-TEST(MyMath) {
-    MyClass my;
-    CHECK(my.addition(3,4) == 7);
-}
-
-int main()
-{
-    return UnitTest::RunAllTests();
+TEST_CASE( "MyMath", "[mymath]" ) {
+    SECTION("Addition") {
+        MyClass my;
+        REQUIRE(my.addition(3,4) == 7);
+    }
 }
