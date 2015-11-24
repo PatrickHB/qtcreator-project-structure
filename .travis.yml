@@ -14,8 +14,8 @@ addons:
       - ubuntu-sdk-team
     packages:
       - qtdeclarative5-dev
-      - catch
 script:
+  - sudo apt-get install catch
   - /usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   - make
   - cd tests
