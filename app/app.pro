@@ -8,4 +8,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp
 
-LIBS += -L../src -lmyapp
+CONFIG( debug, debug|release ) {
+    #Debug
+    LIBS += -L../src/debug -lmyapp
+} else {
+    #Release
+    LIBS += -L../src/release -lmyapp
+}
