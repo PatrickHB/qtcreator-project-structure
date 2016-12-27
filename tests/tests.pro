@@ -16,3 +16,5 @@ CONFIG( debug, debug|release ) {
     #Release
     LIBS += -L../src/release -lmyapp
 }
+
+INCLUDEPATH += ../libs/catch/
