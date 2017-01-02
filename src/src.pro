@@ -1,12 +1,12 @@
 include(../defaults.pri)
 
-CONFIG   += console
-CONFIG   -= app_bundle
-CONFIG   -= qt
-
-TEMPLATE = lib
+QT       -= gui
 
 TARGET = myapp
+
+CONFIG -= app_bundle
+
+TEMPLATE = lib
 
 SOURCES += myclass.cpp
 HEADERS += myclass.h
