@@ -5,10 +5,8 @@ TEMPLATE = app
 
 SOURCES += main.cpp
 
-CONFIG( debug, debug|release ) {
-    #Debug
-    LIBS += -L../src/debug -lmyapp
-} else {
-    #Release
-    LIBS += -L../src/release -lmyapp
-}
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../src/release/ -lmyapp
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../src/debug/ -lmyapp
+
+INCLUDEPATH += $$PWD/../src
+DEPENDPATH += $$PWD/../src
