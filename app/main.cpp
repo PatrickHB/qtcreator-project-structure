@@ -1,11 +1,15 @@
-#include <iostream>
-#include <myclass.h>
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include "myclass.h"
 
-using namespace std;
-
-int main()
+int main(int argc, char *argv[])
 {
-    MyClass adder;
-    cout << adder.addition(10, 20) << endl;
-    return 0;
+    qmlRegisterType<MyClass>("com.patrickbrataas.qtprojecttemplate", 1, 0, "MyClass");
+
+    QGuiApplication app(argc, argv);
+
+    QQmlApplicationEngine engine;
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+
+    return app.exec();
 }
