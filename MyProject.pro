@@ -8,5 +8,4 @@ SUBDIRS = \
 app.depends = src
 tests.depends = src
 
-OTHER_FILES += \
-    defaults.pri
+OTHER_FILES += Src.pri
