@@ -4,7 +4,7 @@
 
 TEST_CASE( "MyMath", "[mymath]" ) {
     SECTION("Addition") {
-        MyClass my;
-        REQUIRE(my.addition(3,4) == 7);
+        MyClass myClass;
+        REQUIRE(myClass.addition(3,4) == 7);
     }
 }
